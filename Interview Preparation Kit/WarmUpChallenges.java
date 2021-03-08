@@ -25,4 +25,3 @@
     }
 	
 	/* Jumping on the Clouds */
-	public static
