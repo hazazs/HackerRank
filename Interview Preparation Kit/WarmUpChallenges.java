@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class WarmUpChallenges {
 
     /* Sales by Match */
     static int sockMerchant(int n, int[] ar) {
@@ -24,4 +28,6 @@
         return numberOfValleys;
     }
 	
-	/* Jumping on the Clouds */
+    /* Jumping on the Clouds */
+    
+}
