@@ -29,5 +29,14 @@ public class WarmUpChallenges {
     }
 	
     /* Jumping on the Clouds */
+    static int jumpingOnClouds(int[] c) {
+        int numberOfMinimumJumps = 0;
+        for (int i = 0; i < c.length-1; i++) {
+            numberOfMinimumJumps++;
+            if (i+2 < c.length && c[i+2] == 0)
+                i++;
+        }
+        return numberOfMinimumJumps;
+    }
     
 }
