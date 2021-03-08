@@ -39,4 +39,17 @@ public class WarmUpChallenges {
         return numberOfMinimumJumps;
     }
     
+    /* Repeated String */
+    static long repeatedString(String s, long n) {
+        int numberOfAsFull = 0;
+        for (int i = 0; i < s.length(); i++)
+            if (s.charAt(i) == 'a')
+                numberOfAsFull++;
+        int numberOfAsSub = 0;
+        for (int i = 0; i < n%s.length(); i++)
+            if (s.charAt(i) == 'a')
+                numberOfAsSub++;
+        return n/s.length()*numberOfAsFull + numberOfAsSub;
+    }
+    
 }
