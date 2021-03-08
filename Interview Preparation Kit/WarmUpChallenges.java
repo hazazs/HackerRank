@@ -6,14 +6,13 @@ public class WarmUpChallenges {
     /* Sales by Match */
     static int sockMerchant(int n, int[] ar) {
         Map<Integer, Integer> socks = new HashMap<>();
-        for (int i : ar)
-            socks.put(i, socks.get(i) == null ? 1 : socks.get(i)+1);
         int numberOfPairs = 0;
-        for (int i : socks.values())
-            numberOfPairs += i/2;
+        for (int i : ar) {
+            socks.put(i, socks.get(i) == null ? 1 : socks.get(i)+1);
+            if (socks.get(i)%2 == 0)
+                numberOfPairs++;
+        }
         return numberOfPairs;
-        // return socks.values().stream().mapToInt(i -> i/2).sum();
-        // return socks.values().stream().collect(Collectors.summingInt(i -> i/2));
     }
     
     /* Counting Valleys */
