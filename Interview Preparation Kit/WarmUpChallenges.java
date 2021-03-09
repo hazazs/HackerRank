@@ -14,7 +14,7 @@ public class WarmUpChallenges {
         }
         return numberOfPairs;
     }
-    
+
     /* Counting Valleys */
     public static int countingValleys(int steps, String path) {
         int numberOfValleys = 0;
@@ -26,7 +26,7 @@ public class WarmUpChallenges {
         }
         return numberOfValleys;
     }
-	
+
     /* Jumping on the Clouds */
     static int jumpingOnClouds(int[] c) {
         int numberOfMinimumJumps = 0;
@@ -37,7 +37,7 @@ public class WarmUpChallenges {
         }
         return numberOfMinimumJumps;
     }
-    
+
     /* Repeated String */
     static long repeatedString(String s, long n) {
         int numberOfAsFull = 0;
@@ -51,5 +51,5 @@ public class WarmUpChallenges {
                 numberOfAsSub++;
         return n/s.length()*numberOfAsFull + numberOfAsSub;
     }
-    
+
 }
