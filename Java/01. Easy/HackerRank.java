@@ -1,3 +1,7 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class HackerRank {
@@ -152,6 +156,16 @@ public class HackerRank {
         int n = in.nextInt();
         in.close();
         String s = String.valueOf(n);
+    }
+    
+    /*
+    Java Date and Time
+     */
+    public static String findDay(int month, int day, int year) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(year, month-1, day);
+        DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
+        return formatter.format(cal.getTime()).toUpperCase();
     }
     
 }
