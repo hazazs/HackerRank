@@ -163,7 +163,7 @@ public class HackerRank {
      */
     public static String findDay(int month, int day, int year) {
         Calendar cal = Calendar.getInstance();
-        cal.set(year, month-1, day);
+        cal.set(year, month - 1, day);
         DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
         return formatter.format(cal.getTime()).toUpperCase();
     }
