@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class HackerRank {
-    
+
     /*
     Welcome to Java!
      */
@@ -13,7 +13,7 @@ public class HackerRank {
         System.out.println("Hello, World.");
         System.out.println("Hello, Java.");
     }
-    
+
     /*
     Java Stdin and Stdout I
      */
@@ -27,7 +27,7 @@ public class HackerRank {
         System.out.println(c);
         scan.close();
     }
-    
+
     /*
     Java Stdin and Stdout II
      */
@@ -42,7 +42,7 @@ public class HackerRank {
         System.out.println("Int: " + i);
         scan.close();
     }
-    
+
     /*
     Java Loops I
      */
@@ -50,11 +50,12 @@ public class HackerRank {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        for (int i = 1; i <= 10; i++)
-            System.out.println(N + " x " + i + " = " + N*i);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(N + " x " + i + " = " + N * i);
+        }
         scanner.close();
     }
-    
+
     /*
     Java Loops II
      */
@@ -73,7 +74,7 @@ public class HackerRank {
         }
         in.close();
     }
-    
+
     /*
     Java If-Else
      */
@@ -81,12 +82,14 @@ public class HackerRank {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        if (N%2 == 0)
+        if (N % 2 == 0) {
             System.out.println(N >= 2 && N <= 5 || N > 20 ? "Not Weird" : "Weird");
-        else System.out.println("Weird");
+        } else {
+            System.out.println("Weird");
+        }
         scanner.close();
     }
-    
+
     /*
     Java Output Formatting
      */
@@ -101,40 +104,46 @@ public class HackerRank {
         System.out.println("================================");
         sc.close();
     }
-    
+
     /*
     Java Datatypes
      */
     public void javaDatatypes() {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        for (int i = 0; i < t; i++)
+        for (int i = 0; i < t; i++) {
             try {
                 long x = sc.nextLong();
                 System.out.println(x + " can be fitted in:");
-                if (x >= -128 && x <= 127)
+                if (x >= -128 && x <= 127) {
                     System.out.println("* byte");
-                if (x >= -1 * Math.pow(2, 15) && x <= Math.pow(2, 15) - 1)
+                }
+                if (x >= -1 * Math.pow(2, 15) && x <= Math.pow(2, 15) - 1) {
                     System.out.println("* short");
-                if (x >= -1 * Math.pow(2, 31) && x <= Math.pow(2, 31) - 1)
+                }
+                if (x >= -1 * Math.pow(2, 31) && x <= Math.pow(2, 31) - 1) {
                     System.out.println("* int");
-                if (x >= -1 * Math.pow(2, 63) && x <= Math.pow(2, 63) - 1)
+                }
+                if (x >= -1 * Math.pow(2, 63) && x <= Math.pow(2, 63) - 1) {
                     System.out.println("* long");
+                }
             } catch (Exception e) {
                 System.out.println(sc.next() + " can't be fitted anywhere.");
             }
+        }
     }
-    
+
     /*
     Java End-of-file
      */
     public void javaEndOfFile() {
         Scanner scanner = new Scanner(System.in);
         int counter = 1;
-        while (scanner.hasNext())
+        while (scanner.hasNext()) {
             System.out.println(counter++ + " " + scanner.nextLine());
+        }
     }
-    
+
     /*
     Java Static Initializer Block
      */
@@ -144,10 +153,11 @@ public class HackerRank {
     private final static boolean flag = B > 0 && H > 0;
 
     static {
-        if (!flag)
+        if (!flag) {
             System.out.println("java.lang.Exception: Breadth and height must be positive");
+        }
     }
-    
+
     /*
     Java Int to String
      */
@@ -157,7 +167,7 @@ public class HackerRank {
         in.close();
         String s = String.valueOf(n);
     }
-    
+
     /*
     Java Date and Time
      */
@@ -167,5 +177,5 @@ public class HackerRank {
         DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
         return formatter.format(cal.getTime()).toUpperCase();
     }
-    
+
 }
