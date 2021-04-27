@@ -1,4 +1,5 @@
 import java.text.DateFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -176,6 +177,24 @@ public class HackerRank {
         cal.set(year, month - 1, day);
         DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
         return formatter.format(cal.getTime()).toUpperCase();
+    }
+    
+    /*
+    Java Currency Formatter
+     */
+    public void javaCurrencyFormatter() {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        Locale locale = new Locale("en", "IN");
+        NumberFormat india = NumberFormat.getCurrencyInstance(locale);
+        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        System.out.println("US: " + us.format(payment));
+        System.out.println("India: " + india.format(payment));
+        System.out.println("China: " + china.format(payment));
+        System.out.println("France: " + france.format(payment));
     }
 
 }
