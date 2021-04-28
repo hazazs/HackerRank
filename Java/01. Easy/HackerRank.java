@@ -196,5 +196,20 @@ public class HackerRank {
         System.out.println("China: " + china.format(payment));
         System.out.println("France: " + france.format(payment));
     }
+    
+    /*
+    Java Strings Introduction
+     */
+    public void javaStringsIntroduction() {
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        String B = sc.next();
+        System.out.println(A.length() + B.length());
+        System.out.println(A.compareTo(B) > 0 ? "Yes" : "No");
+        String modA = A.substring(0, 1).toUpperCase().concat(A.substring(1));
+        String modB = B.substring(0, 1).toUpperCase().concat(B.substring(1));
+        System.out.printf("%s %s", modA, modB);
+        sc.close();
+    }
 
 }
