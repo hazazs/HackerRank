@@ -2,10 +2,8 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Comparator;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class HackerRank {
 
@@ -229,16 +227,8 @@ public class HackerRank {
     Java Substring Comparisons
      */
     public static String getSmallestAndLargest(String s, int k) {
-        String smallest = IntStream.rangeClosed(0, s.length() - k)
-                .mapToObj(i -> s.substring(i, i + k))
-                .sorted()
-                .findFirst()
-                .get();
-        String largest = IntStream.rangeClosed(0, s.length() - k)
-                .mapToObj(i -> s.substring(i, i + k))
-                .sorted(Comparator.reverseOrder())
-                .findFirst()
-                .get();
+        String smallest = s.substring(0, k);
+        String largest = "";
         for (int i = 0; i < s.length() - (k - 1); i++) {
             if (smallest.compareTo(s.substring(i, i + k)) > 0) {
                 smallest = s.substring(i, i + k);
