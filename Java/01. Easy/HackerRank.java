@@ -211,5 +211,16 @@ public class HackerRank {
         System.out.printf("%s %s", modA, modB);
         sc.close();
     }
+    
+    /*
+    Java Substring
+     */
+    public void javaSubstring() {
+        Scanner in = new Scanner(System.in);
+        String S = in.next();
+        int start = in.nextInt();
+        int end = in.nextInt();
+        System.out.println(S.substring(start, end));
+    }
 
 }
