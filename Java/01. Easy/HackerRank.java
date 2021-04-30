@@ -250,5 +250,18 @@ public class HackerRank {
         System.out.println(isEqual ? "Yes" : "No");
         sc.close();
     }
+    
+    /*
+    Java Anagrams
+     */
+    static boolean isAnagram(String a, String b) {
+        if (a.length() == b.length()) {
+            for (int i = 0; i < a.length(); i++) {
+                b = b.replaceFirst("(?i)".concat(a.substring(i, i + 1)), "");
+            }
+            return b.isEmpty();
+        }
+        return false;
+    }
 
 }
