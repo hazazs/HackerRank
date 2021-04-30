@@ -239,5 +239,16 @@ public class HackerRank {
         }
         return String.format("%s%n%s", smallest, largest);
     }
+    
+    /*
+    Java String Reverse
+     */
+    public void javaStringReverse() {
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        boolean isEqual = new StringBuilder(A).reverse().toString().equals(A);
+        System.out.println(isEqual ? "Yes" : "No");
+        sc.close();
+    }
 
 }
