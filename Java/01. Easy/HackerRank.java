@@ -263,5 +263,18 @@ public class HackerRank {
         }
         return false;
     }
+    
+    /*
+    Java String Tokens
+     */
+    public void javaStringTokens() {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine().trim();
+        String[] tokens = s.isEmpty() ? new String[0] : s.split("[^A-Za-z]+");
+        System.out.println(tokens.length);
+        for (String token : tokens)
+            System.out.println(token);
+        scan.close();
+    }
 
 }
