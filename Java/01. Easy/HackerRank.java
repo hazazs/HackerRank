@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -308,6 +309,41 @@ public class HackerRank {
         private UsernameValidator() {
         }
 
+    }
+    
+    /*
+    Java Primality Test
+     */
+    public void javaPrimalityTest() {
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        System.out.println(new BigInteger(n).isProbablePrime(1) ? "prime" : "not prime");
+        scanner.close();
+    }
+    
+    /*
+    Java BigInteger
+     */
+    public void javaBigInteger() {
+        Scanner scanner = new Scanner(System.in);
+        BigInteger a = new BigInteger(scanner.nextLine());
+        BigInteger b = new BigInteger(scanner.nextLine());
+        System.out.println(a.add(b));
+        System.out.println(a.multiply(b));
+        scanner.close();
+    }
+    
+    /*
+    Java 1D Array
+     */
+    public void java1DArray() {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = scan.nextInt();
+        }
+        scan.close();
     }
 
 }
