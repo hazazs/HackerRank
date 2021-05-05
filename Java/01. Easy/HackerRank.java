@@ -302,9 +302,9 @@ public class HackerRank {
     Valid Username Regular Expression
      */
     class UsernameValidator {
-        
+
         public static final String PATTERN = "[A-Za-z]{1}[A-Za-z0-9_]{7,29}";
-        
+
         private UsernameValidator() {
         }
 
