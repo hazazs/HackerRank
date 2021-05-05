@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class HackerRank {
 
@@ -151,10 +153,10 @@ public class HackerRank {
     private final static Scanner scanner = new Scanner(System.in);
     private final static int B = scanner.nextInt();
     private final static int H = scanner.nextInt();
-    private final static boolean flag = B > 0 && H > 0;
+    private final static boolean FLAG = B > 0 && H > 0;
 
     static {
-        if (!flag) {
+        if (!FLAG) {
             System.out.println("java.lang.Exception: Breadth and height must be positive");
         }
     }
@@ -178,7 +180,7 @@ public class HackerRank {
         DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
         return formatter.format(cal.getTime()).toUpperCase();
     }
-    
+
     /*
     Java Currency Formatter
      */
@@ -196,7 +198,7 @@ public class HackerRank {
         System.out.println("China: " + china.format(payment));
         System.out.println("France: " + france.format(payment));
     }
-    
+
     /*
     Java Strings Introduction
      */
@@ -211,7 +213,7 @@ public class HackerRank {
         System.out.printf("%s %s", modA, modB);
         sc.close();
     }
-    
+
     /*
     Java Substring
      */
@@ -222,7 +224,7 @@ public class HackerRank {
         int end = in.nextInt();
         System.out.println(S.substring(start, end));
     }
-    
+
     /*
     Java Substring Comparisons
      */
@@ -239,7 +241,7 @@ public class HackerRank {
         }
         return String.format("%s%n%s", smallest, largest);
     }
-    
+
     /*
     Java String Reverse
      */
@@ -250,7 +252,7 @@ public class HackerRank {
         System.out.println(isEqual ? "Yes" : "No");
         sc.close();
     }
-    
+
     /*
     Java Anagrams
      */
@@ -263,7 +265,7 @@ public class HackerRank {
         }
         return false;
     }
-    
+
     /*
     Java String Tokens
      */
@@ -272,9 +274,40 @@ public class HackerRank {
         String s = scan.nextLine().trim();
         String[] tokens = s.isEmpty() ? new String[0] : s.split("[^A-Za-z]+");
         System.out.println(tokens.length);
-        for (String token : tokens)
+        for (String token : tokens) {
             System.out.println(token);
+        }
         scan.close();
+    }
+
+    /*
+    Pattern Syntax Checker
+     */
+    public void patternSyntaxChecker() {
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while (testCases-- > 0) {
+            String pattern = in.nextLine();
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (PatternSyntaxException ex) {
+                System.out.println("Invalid");
+            }
+        }
+        in.close();
+    }
+
+    /*
+    Valid Username Regular Expression
+     */
+    class UsernameValidator {
+        
+        public static final String PATTERN = "[A-Za-z]{1}[A-Za-z0-9_]{7,29}";
+        
+        private UsernameValidator() {
+        }
+
     }
 
 }
