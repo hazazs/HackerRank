@@ -363,4 +363,11 @@ public class HackerRank {
         System.out.println(maxHourglassSum);
     }
 
+    /*
+    Java Subarray
+     */
+    public void javaSubarray() {
+        
+    }
+
 }
