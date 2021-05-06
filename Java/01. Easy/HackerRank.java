@@ -310,7 +310,7 @@ public class HackerRank {
         }
 
     }
-    
+
     /*
     Java Primality Test
      */
@@ -320,7 +320,7 @@ public class HackerRank {
         System.out.println(new BigInteger(n).isProbablePrime(1) ? "prime" : "not prime");
         scanner.close();
     }
-    
+
     /*
     Java BigInteger
      */
@@ -332,7 +332,7 @@ public class HackerRank {
         System.out.println(a.multiply(b));
         scanner.close();
     }
-    
+
     /*
     Java 1D Array
      */
@@ -344,6 +344,23 @@ public class HackerRank {
             a[i] = scan.nextInt();
         }
         scan.close();
+    }
+
+    /*
+    Java 2D Array
+     */
+    public void java2DArray() {
+        int[][] arr = new int[6][6];
+        int maxHourglassSum = Integer.MIN_VALUE;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                maxHourglassSum = Math.max(maxHourglassSum,
+                    arr[i][j]   + arr[i][j+1]   + arr[i][j+2] +
+                                  arr[i+1][j+1] +
+                    arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]);
+            }
+        }
+        System.out.println(maxHourglassSum);
     }
 
 }
