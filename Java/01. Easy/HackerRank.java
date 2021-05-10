@@ -4,8 +4,10 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -434,6 +436,34 @@ public class HackerRank {
         }
         for (int i = 0; i < list.size(); i++) {
             System.out.printf("%d ", list.get(i));
+        }
+        scanner.close();
+    }
+
+    /*
+    Java Map
+     */
+    public void javaMap() {
+        Scanner scanner = new Scanner(System.in);
+        Map<String, Integer> map = new HashMap<>();
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            scanner.nextLine();
+            String name = scanner.nextLine();
+            if (!map.containsKey(name)) {
+                map.put(name, scanner.nextInt());
+            } else {
+                scanner.nextInt();
+            }
+        }
+        scanner.nextLine();
+        while (scanner.hasNext()) {
+            String name = scanner.nextLine();
+            if (map.containsKey(name)) {
+                System.out.printf("%s=%d%n", name, map.get(name));
+            } else {
+                System.out.println("Not found");
+            }
         }
         scanner.close();
     }
