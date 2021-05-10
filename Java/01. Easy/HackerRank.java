@@ -2,7 +2,9 @@ import java.math.BigInteger;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -383,6 +385,56 @@ public class HackerRank {
             }
         }
         System.out.println(numberOfNegativeSums);
+        scanner.close();
+    }
+
+    /*
+    Java Arraylist
+     */
+    public void javaArraylist() {
+        Scanner scanner = new Scanner(System.in);
+        List<int[]> list = new ArrayList<>();
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            int[] arr = new int[scanner.nextInt()];
+            for (int j = 0; j < arr.length; arr[j++] = scanner.nextInt()) {
+            }
+            list.add(arr);
+        }
+        n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            try {
+                int x = scanner.nextInt() - 1;
+                int y = scanner.nextInt() - 1;
+                System.out.println(list.get(x)[y]);
+            } catch (IndexOutOfBoundsException x) {
+                System.out.println("ERROR!");
+            }
+        }
+        scanner.close();
+    }
+
+    /*
+    Java List
+     */
+    public void javaList() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        List<Integer> list = new ArrayList<>(n);
+        for (int i = 0; i < n; i++) {
+            list.add(scanner.nextInt());
+        }
+        n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            if (scanner.next().equals("Insert")) {
+                list.add(scanner.nextInt(), scanner.nextInt());
+            } else {
+                list.remove(scanner.nextInt());
+            }
+        }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.printf("%d ", list.get(i));
+        }
         scanner.close();
     }
 
