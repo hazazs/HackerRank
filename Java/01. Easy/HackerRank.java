@@ -152,6 +152,7 @@ public class HackerRank {
         while (scanner.hasNext()) {
             System.out.println(counter++ + " " + scanner.nextLine());
         }
+        scanner.close();
     }
 
     /*
