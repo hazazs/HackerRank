@@ -502,20 +502,20 @@ public class HackerRank {
     /*
     Java Sort
      */
-	public void javaSort() {
-		try (Scanner in = new Scanner(System.in)) {
-			int testCases = in.nextInt();
-			List<Student> studentList = new ArrayList<>(testCases);
-			while (testCases-- > 0) {
-				int id = in.nextInt();
-				String fname = in.next();
-				double cgpa = in.nextDouble();
-				studentList.add(new Student(id, fname, cgpa));
-			}
-			studentList.sort(Comparator.comparing(Student::getCgpa).reversed().thenComparing(Student::getFname)
-					.thenComparing(Student::getId));
-			studentList.forEach(s -> System.out.println(s.getFname()));
-		}
-	}
+    public void javaSort() {
+    	try (Scanner in = new Scanner(System.in)) {
+    		int testCases = in.nextInt();
+    		List<Student> studentList = new ArrayList<>(testCases);
+    		while (testCases-- > 0) {
+    			int id = in.nextInt();
+    			String fname = in.next();
+    			double cgpa = in.nextDouble();
+    			studentList.add(new Student(id, fname, cgpa));
+    		}
+    		studentList.sort(Comparator.comparing(Student::getCgpa).reversed().thenComparing(Student::getFname)
+    				.thenComparing(Student::getId));
+    		studentList.forEach(s -> System.out.println(s.getFname()));
+    	}
+    }
 
 }
