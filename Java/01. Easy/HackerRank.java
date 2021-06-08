@@ -516,4 +516,59 @@ public class HackerRank {
 		}
 	}
 
+	/*
+	 * Java BitSet
+	 */
+	public void javaBitSet() {
+		try (Scanner scanner = new Scanner(System.in)) {
+			int length = scanner.nextInt();
+			BitSet b1 = new BitSet(length);
+			BitSet b2 = new BitSet(length);
+			int operations = scanner.nextInt();
+			for (int i = 0; i < operations; i++) {
+				switch (scanner.next()) {
+				case "AND":
+					if (scanner.nextInt() == 1) {
+						b1.and(b2);
+					} else {
+						b2.and(b1);
+					}
+					scanner.nextLine();
+					break;
+				case "OR":
+					if (scanner.nextInt() == 1) {
+						b1.or(b2);
+					} else {
+						b2.or(b1);
+					}
+					scanner.nextLine();
+					break;
+				case "XOR":
+					if (scanner.nextInt() == 1) {
+						b1.xor(b2);
+					} else {
+						b2.xor(b1);
+					}
+					scanner.nextLine();
+					break;
+				case "SET":
+					if (scanner.nextInt() == 1) {
+						b1.set(scanner.nextInt());
+					} else {
+						b2.set(scanner.nextInt());
+					}
+					break;
+				case "FLIP":
+					if (scanner.nextInt() == 1) {
+						b1.flip(scanner.nextInt());
+					} else {
+						b2.flip(scanner.nextInt());
+					}
+					break;
+				}
+				System.out.printf("%d %d%n", b1.cardinality(), b2.cardinality());
+			}
+		}
+	}
+
 }
